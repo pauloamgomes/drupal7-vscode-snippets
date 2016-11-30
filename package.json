@@ -2,7 +2,7 @@
   "name": "drupal7-hooks-snippets",
   "displayName": "Drupal-7-Hooks-Snippets",
   "description": "Provides Drupal 7 snippets for core and major contributed module hooks",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "pauloamgomes",
   "license": "MIT",
   "icon": "images/icon.png",
