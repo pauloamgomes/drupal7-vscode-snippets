@@ -4486,6 +4486,31 @@
         "description": "Define menu items and page callbacks.",
         "scope": "text.php"
     },
+    "hook_menu": {
+        "prefix": "hook_menu",
+        "body": [
+            "\/**",
+            " * Implements hook_menu().",
+            " *\/",
+            "function hook_menu() {",
+            "\/**",
+            " * Sample code from the api example.",
+            " *  $items['blog'] = array(",
+            " *    'title' => 'blogs',",
+            " *    'page callback' => 'blog_page',",
+            " *    'access arguments' => array('access content'),",
+            " *    'type' => MENU_SUGGESTED_ITEM,",
+            " *);",
+            " *return $items;",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            ""
+            "}"
+        ],
+        "description": "Define menu items and page callbacks.",
+        "scope": "text.php"
+    },
     "hook_menu_alter": {
         "prefix": "hook_menu_alter",
         "body": [

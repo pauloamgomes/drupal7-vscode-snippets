@@ -1,0 +1,43 @@
+{
+    "hook_libraries_info_alter": {
+        "prefix": "hook_libraries_info_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_libraries_info_alter().",
+            " *\/",
+            "function hook_libraries_info_alter(&$libraries) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  $files = array(",
+            " *    'php' => array('example_module.php_spellchecker.inc'),",
+            " *  );",
+            " *  $libraries['php_spellchecker']['integration files']['example_module'] = $files;",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Alter the library information before detection and caching takes place.",
+        "scope": "text.php"
+    },
+    "hook_libraries_info_file_paths": {
+        "prefix": "hook_libraries_info_file_paths",
+        "body": [
+            "\/**",
+            " * Implements hook_libraries_info_file_paths().",
+            " *\/",
+            "function hook_libraries_info_file_paths() {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ Taken from the Libraries test module, which needs to specify the path to",
+            " *  \/\/ the test library.",
+            " *  return array(drupal_get_path('module', 'libraries_test') . '\/example');",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Specify paths to look for library info files.",
+        "scope": "text.php"
+    }
+}

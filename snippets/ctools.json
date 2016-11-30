@@ -1,0 +1,262 @@
+{
+    "hook_ctools_plugin_directory": {
+        "prefix": "hook_ctools_plugin_directory",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_plugin_directory().",
+            " *\/",
+            "function hook_ctools_plugin_directory($owner, $plugin_type) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ Form 1 - for a module implementing only the 'content_types' plugin owned",
+            " *  \/\/ by CTools, this would cause the plugin system to search the",
+            " *  \/\/ <moduleroot>\/plugins\/content_types directory for .inc plugin files.",
+            " *  if ($owner == 'ctools' && $plugin_type == 'content_types') {",
+            " *    return 'plugins\/content_types';",
+            " *  }",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "This hook is used to inform the CTools plugin system about the location of a",
+        "scope": "text.php"
+    },
+    "hook_ctools_plugin_pre_alter": {
+        "prefix": "hook_ctools_plugin_pre_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_plugin_pre_alter().",
+            " *\/",
+            "function hook_ctools_plugin_pre_alter(&$plugin, &$info) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ Override a function defined by the plugin.",
+            " *  if ($info['type'] == 'my_type') {",
+            " *    $plugin['my_flag'] = 'new_value';",
+            " *  }",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Alter a plugin before it has been processed.",
+        "scope": "text.php"
+    },
+    "hook_ctools_plugin_post_alter": {
+        "prefix": "hook_ctools_plugin_post_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_plugin_post_alter().",
+            " *\/",
+            "function hook_ctools_plugin_post_alter(&$plugin, &$info) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ Override a function defined by the plugin.",
+            " *  if ($info['type'] == 'my_type') {",
+            " *    $plugin['my_function'] = 'new_function';",
+            " *  }",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Alter a plugin after it has been processed.",
+        "scope": "text.php"
+    },
+    "hook_ctools_api_hook_alter": {
+        "prefix": "hook_ctools_api_hook_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_api_hook_alter().",
+            " *\/",
+            "function hook_ctools_api_hook_alter(&$list) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ Alter the path of the node implementation.",
+            " *  $list['node']['path'] = drupal_get_path('module', 'node');",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Alter the list of modules\/themes which implement a certain api.",
+        "scope": "text.php"
+    },
+    "hook_ctools_math_expression_functions_alter": {
+        "prefix": "hook_ctools_math_expression_functions_alter",
+        "body": [
+            "\/**",
+            " * Implements in your module and\n * allow to use it in the math expression api.\n *\n * @param $functions\n *    An array which has the functions as value.\n *\/\nfunction hook_ctools_math_expression_functions_alter().",
+            " *\/",
+            "function hook_ctools_math_expression_functions_alter(&$functions) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ Allow to convert from degrees to radiant.",
+            " *  $functions[] = 'deg2rad';",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Alter the available functions to be used in ctools math expression api.",
+        "scope": "text.php"
+    },
+    "hook_ctools_render_alter": {
+        "prefix": "hook_ctools_render_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_render_alter().",
+            " *\/",
+            "function hook_ctools_render_alter(&$info, &$page, &$context) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  if ($context['handler']->name == 'my_handler') {",
+            " *    ctools_add_css('my_module.theme', 'my_module');",
+            " *  }",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Alter everything.",
+        "scope": "text.php"
+    },
+    "hook_ctools_content_subtype_alter": {
+        "prefix": "hook_ctools_content_subtype_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_content_subtype_alter().",
+            " *\/",
+            "function hook_ctools_content_subtype_alter($subtype, $plugin) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  $subtype['render last'] = TRUE;",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Alter a content plugin subtype.",
+        "scope": "text.php"
+    },
+    "hook_ctools_entity_context_alter": {
+        "prefix": "hook_ctools_entity_context_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_entity_context_alter().",
+            " *\/",
+            "function hook_ctools_entity_context_alter(&$plugin, &$entity, $plugin_id) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  ctools_include('context');",
+            " *  switch ($plugin_id) {",
+            " *    case 'entity_id:taxonomy_term':",
+            " *      $plugin['no ui'] = TRUE;",
+            " *    case 'entity:user':",
+            " *      $plugin = ctools_get_context('user');",
+            " *      unset($plugin['no ui']);",
+            " *      unset($plugin['no required context ui']);",
+            " *      break;",
+            " *  }",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Alter the definition of an entity context plugin.",
+        "scope": "text.php"
+    },
+    "hook_ctools_entity_contexts_alter": {
+        "prefix": "hook_ctools_entity_contexts_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_entity_contexts_alter().",
+            " *\/",
+            "function hook_ctools_entity_contexts_alter(&$plugins) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  $plugins['entity_id:taxonomy_term']['no ui'] = TRUE;",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Alter the definition of entity context plugins.",
+        "scope": "text.php"
+    },
+    "hook_ctools_cleanstring_alter": {
+        "prefix": "hook_ctools_cleanstring_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_cleanstring_alter().",
+            " *\/",
+            "function hook_ctools_cleanstring_alter(&$settings) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ Convert all strings to lower case.",
+            " *  $settings['lower case'] = TRUE;",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Change cleanstring settings.",
+        "scope": "text.php"
+    },
+    "hook_ctools_cleanstring_CLEAN_ID_alter": {
+        "prefix": "hook_ctools_cleanstring_CLEAN_ID_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_ctools_cleanstring_CLEAN_ID_alter().",
+            " *\/",
+            "function hook_ctools_cleanstring_CLEAN_ID_alter(&$settings) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ Convert all strings to lower case.",
+            " *  $settings['lower case'] = TRUE;",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "Change cleanstring settings for a specific clean ID.",
+        "scope": "text.php"
+    },
+    "hook_page_manager_operations_alter": {
+        "prefix": "hook_page_manager_operations_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_page_manager_operations_alter().",
+            " *\/",
+            "function hook_page_manager_operations_alter(&$result, &$page) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ @todo.",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "@todo.",
+        "scope": "text.php"
+    },
+    "hook_page_manager_variant_operations_alter": {
+        "prefix": "hook_page_manager_variant_operations_alter",
+        "body": [
+            "\/**",
+            " * Implements hook_page_manager_variant_operations_alter().",
+            " *\/",
+            "function hook_page_manager_variant_operations_alter(&$operations, &$handler) {",
+            "\/**",
+            " * Sample code from the api example:",
+            " *  \/\/ @todo.",
+            " *\/",
+            "",
+            " \/* Your code here *\/",
+            "}"
+        ],
+        "description": "@todo.",
+        "scope": "text.php"
+    }
+}
