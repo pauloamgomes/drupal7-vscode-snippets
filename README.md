@@ -13,7 +13,7 @@ This extension provides code snippets of Drupal 7 hooks (core and important cont
 ## Installation
 Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
 ```
-ext install drupal7-hooks-snippets
+ext install drupal-7-hooks-snippets
 ```
 
 ## Using
