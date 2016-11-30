@@ -7,7 +7,7 @@
   "license": "MIT",
   "icon": "images/icon.png",
   "engines": {
-    "vscode": "0.10.x"
+    "vscode": "^0.10.x"
   },
   "categories": [
     "Snippets"
@@ -17,7 +17,23 @@
       {
         "language": "php",
         "path": "./snippets/core.json"
-      }
+      },
+      {
+        "language": "php",
+        "path": "./snippets/views.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/ctools.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/entity.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/libraries.json"
+      },
     ]
   }
 }
